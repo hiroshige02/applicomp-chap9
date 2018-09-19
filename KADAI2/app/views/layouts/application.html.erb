@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KADAI2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <header>
+    <h3>Bookers</h3>
+    <ul class="">
+　　<% if user_signed_in? %>
+       <i class="fas fa-user"></i>
+       <li class="">
+         <%= link_to "ログアウト", des %>
+       </li>
+
+
+      <% else %>
+         <!-- アイコンを入れる-->
+        <li>
+          <%= link_to root_path do %>
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <span class="header-list">Home</span>
+          <% end %>
+        </li>
+        <li>
+         <%= link_to root_path do %>
+         <i class="fa fa-link" aria-hidden="true"></i>
+         <span class="header-list">About</span>
+         <% end %>
+        </li>
+        <li>
+         <%= link_to new_user_registration_path do%>
+         <i class="fa fa-address-book" aria-hidden="true"></i>
+         <span class="header-list">Sign up</span>
+         <% end %>
+        </li>
+        <li>
+         <%= link_to new_user_session_path do %>
+         <i class="fa fa-sign-in" aria-hidden="true"></i>
+         <span class="header-list">Login</span>
+         <% end %>
+        </li>
+
+
+   <% end %>
+   </ul>
+  </header>
+　　<%= yield %>
+  </body>
+</html>
