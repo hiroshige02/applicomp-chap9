@@ -68,6 +68,10 @@ gem "devise"
 gem "bootstrap-sass"
 gem "jquery-rails"
 gem "font-awesome-rails"
+<<<<<<< HEAD
 gem "kaminari"
 gem  "pry-byebug"
 gem "pry-rails"
+=======
+gem "kaminari"
+>>>>>>> 5a2de52029c97934a1080295e7073f34566cde32
